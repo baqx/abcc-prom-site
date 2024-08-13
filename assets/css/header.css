@@ -1,0 +1,102 @@
+/* Navbar Styles */
+header {
+  background-color: var(--header);
+  padding: 20px;
+  text-align: center;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav h1 {
+  font-family: "Lobster", cursive;
+  color: var(--accent-color);
+  text-decoration: none;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+}
+
+nav ul li {
+  margin: 0 15px;
+}
+
+nav ul li a {
+  color: var(--primary-text-color);
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+nav ul li a:hover {
+  color: var(--accent-color); /* Accent color for hover effects */
+}
+
+/* Hero Section Styles */
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 60px 20px;
+  text-align: center;
+  perspective: 1000px;
+}
+
+.hero-content {
+  width: 50%;
+  animation: slideIn 1s ease-in-out;
+}
+.hero-content h1 {
+  font-size: 40px;
+  font-weight: bolder;
+}
+.hero-image {
+  width: 50%;
+  animation: scaleUp 1s ease-in-out;
+}
+
+.hero-image img {
+  width: 100%;
+  border-radius: 10px;
+  height: 60%;
+  box-shadow: 0 4px 30px var(--shadow-color); /* Shadow effect for image */
+}
+
+/* Animation Keyframes */
+@keyframes slideIn {
+  from {
+    transform: translateY(100px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes scaleUp {
+  from {
+    transform: scale(0.5);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .hero {
+    flex-direction: column;
+  }
+
+  .hero-content,
+  .hero-image {
+    width: 100%;
+  }
+}

@@ -1,0 +1,118 @@
+.signup-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 20px;
+  background-color: var(--background-color);
+}
+
+.signup-image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.signup-image img {
+  max-width: 60%;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px var(--shadow-color);
+}
+
+.signup-form {
+  flex: 1;
+  max-width: 700px;
+  width: 100%;
+  background-color: var(--secondary-background-color);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px var(--shadow-color);
+}
+
+.signup-form h2 {
+  font-family: "Montserrat", sans-serif;
+  color: var(--accent-color);
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.form-group {
+  margin-bottom: 15px;
+  position: relative;
+}
+
+.form-group label {
+  font-family: "Montserrat", sans-serif;
+  color: var(--primary-text-color);
+  display: block;
+  margin-bottom: 5px;
+}
+
+.form-group input,
+.form-group select {
+  width: 100%;
+  padding: 10px;
+  border-radius: 5px;
+  color: black !important;
+  border: none;
+  background-color: var(
+    --primary-text-color
+  ); /* Darker background for inputs */
+  font-family: "Montserrat", sans-serif;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.form-group input::placeholder {
+  color: black !important;
+}
+
+.form-group select option {
+  background-color: var(--secondary-background-color);
+  color: black !important;
+}
+
+.form-group .error-message {
+  color: var(--error-color);
+  font-size: 0.875rem;
+  margin-top: 5px;
+  display: none;
+}
+
+.image-preview {
+  margin-top: 10px;
+  max-width: 100%;
+  border-radius: 5px;
+  box-shadow: 0 4px 15px var(--shadow-color);
+}
+
+.submit-btn {
+  width: 100%;
+  padding: 15px;
+  background-color: var(--accent-color);
+  color: var(--secondary-background-color);
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.2rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.submit-btn:hover {
+  background-color: var(--primary-text-color);
+  color: var(--accent-color);
+}
+.err {
+  color: rgb(148, 35, 35);
+  margin: 3px;
+}
+@media (max-width: 768px) {
+  .signup-container {
+    flex-direction: column;
+  }
+
+  .signup-image img {
+    max-width: 50%;
+  }
+}

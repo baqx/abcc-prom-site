@@ -1,0 +1,14 @@
+
+RewriteOptions inherit
+RewriteEngine On
+php_flag display_errors off
+RewriteRule ^delcat/([0-9]+)$ delete_category.php?cid=$1
+RewriteRule ^delnominee/([0-9]+)$ delete_nominee.php?nid=$1
+RewriteRule ^([^\.]+)$ $1.php [NC,L]
+
+ErrorDocument 404 /404.php
+
+<Files 403.shtml>
+order allow,deny
+allow from all
+</Files>

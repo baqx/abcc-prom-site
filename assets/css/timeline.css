@@ -1,0 +1,101 @@
+.program-order {
+  padding: 60px 20px;
+  text-align: center;
+  background-color: var(--background-color);
+  color: var(--primary-text-color);
+  background-image: url("../img/abcc.png");
+  background-position: top right; /* Position the image at the top right corner */
+  background-repeat: no-repeat; /* Prevent the image from repeating */
+  /* Adjust as needed: 'cover', 'contain', or specific dimensions */
+}
+
+/* Header Styles */
+.program-order h2 {
+  font-family: "Montserrat", sans-serif;
+  margin-bottom: 30px;
+  color: var(--accent-color);
+  font-size: 2.5rem; /* Larger font size for prominence */
+  position: relative; /* For pseudo-element positioning */
+}
+
+/* Decorative Line Under Header */
+.program-order h2::after {
+  content: "";
+  display: block;
+  width: 80px; /* Length of the decorative line */
+  height: 4px; /* Thickness of the decorative line */
+  background-color: var(--accent-color);
+  margin: 10px auto; /* Center the line */
+  border-radius: 2px; /* Rounded edges for the line */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5); /* Shadow for depth */
+}
+
+/* Timeline Styles */
+.timeline {
+  position: relative;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 10px 0;
+}
+
+.timeline-item {
+  position: relative;
+  margin: 20px 0;
+  padding: 10px;
+  border-left: 2px solid var(--accent-color);
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+.timeline-time {
+  position: absolute;
+  left: -60px;
+  width: 50px;
+  text-align: center;
+  font-weight: bold;
+  color: var(--accent-color);
+  font-family: "Montserrat", sans-serif;
+}
+
+.timeline-content {
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 5px;
+  padding: 15px;
+  transition: transform 0.3s;
+}
+
+.timeline-content h3 {
+  margin: 10px 0;
+}
+
+.timeline-item:hover .timeline-content {
+  transform: scale(1.05);
+}
+
+/* Animation Keyframes */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .program-order {
+    background-size: 70px;
+  }
+  .timeline-time {
+    left: 0;
+    margin-bottom: 10px;
+  }
+
+  .timeline-content {
+    border-left: none;
+    border-radius: 5px;
+    margin-left: 15px;
+  }
+}

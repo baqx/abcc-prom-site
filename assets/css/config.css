@@ -1,0 +1,60 @@
+/* Import Fonts */
+@import url("https://fonts.googleapis.com/css2?family=Lobster&family=Montserrat:wght@400;700&family=Open+Sans:wght@400;700&display=swap");
+
+/* Define CSS Variables */
+:root {
+  --background-color: #121212; /* Dark background */
+  --primary-text-color: #ffffff; /* White text */
+  --secondary-text-color: #b0bec5; /* Light gray text */
+  --accent-color: #dc147c; /* New accent color */
+  --button-background-color: #ff4d94; /* Brighter button color */
+  --button-hover-color: #e6006d; /* Darker button hover color */
+  --shadow-color: rgba(0, 0, 0, 0.5); /* Shadow color */
+  --header: #1e1e1e;
+}
+
+/* Global Styles */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+  background-color: var(--background-color);
+  color: var(--primary-text-color);
+}
+
+h1,
+h2 {
+  font-family: "Montserrat", sans-serif;
+}
+/*
+h1 {
+  color: var(--accent-color); 
+}
+*/
+p {
+  color: var(--secondary-text-color); /* Secondary text color */
+}
+
+.section-header h2 {
+  font-family: "Montserrat", sans-serif;
+  margin-bottom: 30px;
+  color: var(--accent-color);
+  font-size: 2.5rem; /* Larger font size for prominence */
+  position: relative; /* For pseudo-element positioning */
+}
+
+/* Decorative Line Under Header */
+.section-header h2::after {
+  content: "";
+  display: block;
+  width: 80px; /* Length of the decorative line */
+  height: 4px; /* Thickness of the decorative line */
+  background-color: var(--accent-color);
+  margin: 10px auto; /* Center the line */
+  border-radius: 2px; /* Rounded edges for the line */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5); /* Shadow for depth */
+}

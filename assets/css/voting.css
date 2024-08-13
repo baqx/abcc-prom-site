@@ -1,0 +1,168 @@
+/* Voting Section Styles */
+.voting-section {
+  padding: 60px 20px;
+  text-align: center;
+  background-color: var(--background-color);
+  color: var(--primary-text-color);
+}
+
+.category {
+  margin-bottom: 50px;
+  animation: fadeInUp 1.2s ease-out;
+}
+
+.category h3 {
+  font-family: "Montserrat", sans-serif;
+  margin-bottom: 20px;
+  color: var(--secondary-text-color);
+  font-size: 2rem;
+}
+
+.nominees {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.nominee {
+  background-color: var(--secondary-background-color);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px var(--shadow-color);
+  transition: transform 0.3s ease;
+  cursor: pointer;
+}
+
+.nominee img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  margin-bottom: 15px;
+  transition: transform 0.3s ease;
+}
+
+.nominee:hover img {
+  transform: scale(1.05);
+}
+
+.nominee p {
+  font-size: 1.2rem;
+  color: var(--primary-text-color);
+}
+
+.vote-btn {
+  background-color: var(--accent-color);
+  color: var(--primary-text-color);
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.vote-btn:hover {
+  background-color: var(--primary-background-color);
+}
+/* Base styles for the disabled button */
+button:disabled,
+button[disabled] {
+  border: 1px solid #999999;
+  background-color: #cccccc;
+  color: #666666;
+  cursor: not-allowed; /* Indicates the button is not interactive */
+}
+
+button:disabled:hover,
+button[disabled]:hover {
+  border: 1px solid #999999;
+  background-color: #cccccc;
+  color: #666666;
+
+  opacity: 0.6;
+}
+
+/* Spinner styles */
+.spinner {
+  width: 20px;
+  height: 20px;
+  border: 3px solid rgba(255, 255, 255, 0.3);
+  border-top-color: var(--primary-text-color);
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Toast styles */
+.toast {
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: var(--accent-color);
+  color: var(--primary-text-color);
+  padding: 10px 20px;
+  border-radius: 5px;
+  box-shadow: 0 4px 10px var(--shadow-color);
+  animation: fadeInOut 3s ease-in-out;
+}
+
+.toast.success {
+  background-color: green;
+}
+
+.toast.error {
+  background-color: red;
+}
+
+@keyframes fadeInOut {
+  0%,
+  100% {
+    opacity: 0;
+  }
+  10%,
+  90% {
+    opacity: 1;
+  }
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .nominees {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .nominee img {
+    width: 120px;
+    height: 120px;
+  }
+}
+
+/* Animation Keyframes */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

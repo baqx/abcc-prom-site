@@ -1,0 +1,106 @@
+/* Dashboard Section Styles */
+.dashboard-section {
+  padding: 60px 20px;
+  margin: 10px 150px;
+  text-align: center;
+  background-color: var(--background-color);
+  color: var(--primary-text-color);
+}
+
+.dashboard-section h2 {
+  font-family: "Montserrat", sans-serif;
+  margin-bottom: 30px;
+  color: var(--accent-color);
+  font-size: 2.5rem;
+}
+
+/* Form Group Styles */
+.form-group {
+  margin-bottom: 20px;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+select,
+.finput {
+  width: 100%;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid var(--primary-text-color);
+
+  transition: border 0.3s ease;
+}
+
+select:focus,
+.finput:focus {
+  border-color: var(--accent-color);
+}
+
+/* Button Styles */
+.btn,
+button {
+  background-color: var(--accent-color);
+  color: #fff;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.btn:hover,
+button:hover {
+  background-color: darken(var(--accent-color), 10%);
+}
+
+/* View Nominees and Categories Styles */
+.view-nominees,
+.view-categories {
+  margin-top: 40px;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--secondary-background-color);
+  padding: 10px;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  transition: transform 0.3s ease;
+}
+
+li:hover {
+  transform: scale(1.02);
+}
+
+.err {
+  color: rgb(148, 35, 35);
+  margin: 3px;
+}
+.suc {
+  color: rgb(0, 122, 86);
+  margin: 3px;
+}
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .dashboard-section {
+    margin: 5px 0px;
+  }
+  .form-group {
+    width: 100%;
+  }
+
+  .btn {
+    width: 100%;
+  }
+}
